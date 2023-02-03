@@ -1,4 +1,4 @@
-# The source of the parent container can be found here:
+# The source of the parent container can be found here
 # https://github.com/ansible/awx-ee
 
 FROM quay.io/ansible/awx-ee:latest
