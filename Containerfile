@@ -42,7 +42,7 @@ RUN curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux
 RUN yum install -y session-manager-plugin.rpm
 
 # Cloud: AWS CDK
-RUN pip3 install -r https://raw.githubusercontent.com/aws-samples/aws-cdk-examples/master/python/custom-resource/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/Epod/awx-cloud-ee/master/cdk-requirements.txt
 
 # Kubernetes & Helm
 COPY conf/kubernetes.repo /etc/yum.repos.d/kubernetes.repo
