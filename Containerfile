@@ -41,6 +41,9 @@ RUN pip3 install cryptography==37.0.4
 RUN curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm" -o "session-manager-plugin.rpm"
 RUN yum install -y session-manager-plugin.rpm
 
+# Cloud: AWS CDK
+RUN pip3 install -r https://raw.githubusercontent.com/aws-samples/aws-cdk-examples/master/python/custom-resource/requirements.txt
+
 # Kubernetes & Helm
 COPY conf/kubernetes.repo /etc/yum.repos.d/kubernetes.repo
 RUN dnf install -y \
